@@ -1,0 +1,10 @@
+/* header font */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-stone-900 bg-stone-50 font-serif tracking-wide;
+}

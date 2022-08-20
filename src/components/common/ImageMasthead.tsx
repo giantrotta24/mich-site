@@ -15,33 +15,39 @@ const ImageMasthead: React.FC = ( props: ImageMastheadProps ) => {
   return(
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full my-6">
       <div className="flex flex-col xl:flex-row shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
-        <Image
-          alt="Michelle's Blog"
-          className="object-cover w-full h-48"
-          src='/images/blog-placeholder.jpg'
-          height='800'
-          width='500'
-        />
+        <Link href='/blog'>
+          <Image
+            alt="Michelle's Blog"
+            className="object-cover w-full h-48"
+            src='/images/blog-placeholder.jpg'
+            height='800'
+            width='500'
+          />
+        </Link>
       </div>
 
       <div className="flex flex-col xl:flex-row shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
-        <Image
-          alt="About Michelle"
-          className="object-cover w-full h-48"
-          src='/images/michelle-placeholder.jpg'
-          height='800'
-          width='500'
-        />
+        <Link href='/about'>
+          <Image
+            alt="About Michelle"
+            className="object-cover w-full h-48"
+            src='/images/michelle-placeholder.jpg'
+            height='800'
+            width='500'
+          />
+        </Link>
       </div>
 
       <div className="flex flex-col xl:flex-row shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
-        <Image
-          alt="Michelle's Books"
-          className="object-cover w-full h-48"
-          src='/images/books-placeholder.jpg'
-          height='800'
-          width='500'
-        />
+        <Link href='/books'>
+          <Image
+            alt="Michelle's Books"
+            className="object-cover w-full h-48"
+            src='/images/books-placeholder.jpg'
+            height='800'
+            width='500'
+          />
+        </Link>
       </div>
     </div>
   )

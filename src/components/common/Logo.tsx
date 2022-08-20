@@ -14,13 +14,15 @@ interface LogoProps {
 const Logo: React.FC = (props: LogoProps) => {
   return(
     <div className='m-6'>
-      <Image
-        alt="My Life. My Blog."
-        className="object-cover w-full h-48"
-        src='/images/logo.png'
-        height='200'
-        width='500'
-      />
+      <Link href='/'>
+        <Image
+          alt="My Life. My Blog."
+          className="object-cover w-full h-48"
+          src='/images/logo.png'
+          height='200'
+          width='500'
+        />
+      </Link>
     </div>
   )
 }

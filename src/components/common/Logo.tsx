@@ -2,18 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-interface LogoProps { 
-  alt: string;
-  className: string;
-  height: number;
-  src: string;
-  url: string;
-  width: number;
-}
-
-const Logo: React.FC = (props: LogoProps) => {
+const Logo = () => {
   return(
-    <div className='m-6'>
+    <div className='m-8'>
       <Link href='/'>
         <Image
           alt="My Life. My Blog."

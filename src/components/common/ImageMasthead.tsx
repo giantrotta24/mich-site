@@ -7,13 +7,12 @@ interface ImageMastheadProps {
   className: string;
   height: number;
   src: string;
-  url: string;
   width: number;
 }
 
 const ImageMasthead: React.FC = ( props: ImageMastheadProps ) => {
   return(
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full my-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full my-8">
       <div className="flex flex-col xl:flex-row shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
         <Link href='/blog'>
           <Image

@@ -19,7 +19,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="container antialiased mx-auto h-auto m-w-screen">
+      <main className="lg:container lg:mx-auto antialiased h-auto m-w-screen">
         {children}
       </main>
     </>

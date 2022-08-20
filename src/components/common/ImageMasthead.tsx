@@ -7,37 +7,43 @@ interface ImageMastheadProps {
   className: string;
   height: number;
   src: string;
-  width: number;
   url: string;
+  width: number;
 }
 
 const ImageMasthead: React.FC = ( props: ImageMastheadProps ) => {
   return(
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full my-6">
       <div className="flex flex-col xl:flex-row shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
         <Image
+          alt="Michelle's Blog"
           className="object-cover w-full h-48"
-          src={url}
-          alt="Flower and sky"
+          src='/images/blog-placeholder.jpg'
+          height='800'
+          width='500'
         />
       </div>
 
       <div className="flex flex-col xl:flex-row shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
         <Image
+          alt="About Michelle"
           className="object-cover w-full h-48"
-          src=""
-          alt="Flower and sky"
+          src='/images/michelle-placeholder.jpg'
+          height='800'
+          width='500'
         />
       </div>
 
-  <div className="flex flex-col xl:flex-row shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
-    <Image
-      className="object-cover w-full h-48"
-      src=""
-      alt="Flower and sky"
-    />
-  </div>
-</div>
+      <div className="flex flex-col xl:flex-row shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+        <Image
+          alt="Michelle's Books"
+          className="object-cover w-full h-48"
+          src='/images/books-placeholder.jpg'
+          height='800'
+          width='500'
+        />
+      </div>
+    </div>
   )
 }
 

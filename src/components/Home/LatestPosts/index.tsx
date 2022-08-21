@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Heading from '../../common/Heading';
 import Post from './Post';
 
 const latestPosts = [
@@ -26,7 +27,7 @@ const latestPosts = [
 const LatestPosts: React.FC = () => {
   return (
     <div className="border-t border-stone-200 grid text-center mb-6">
-      <h2 className="text-xl font-bold pt-2 md:pt-4">My Latest Posts</h2>
+      <Heading>My Latest Posts</Heading>
       <div className="block md:grid md:grid-cols-3">
         {latestPosts.map(post => (
           <Post
@@ -38,7 +39,10 @@ const LatestPosts: React.FC = () => {
         ))}
       </div>
       <Link href="#">
-        <button className="border border-stone-400 mx-auto px-8 py-2">
+        <button
+          type="button"
+          className="border border-stone-400 mx-auto px-8 py-2 hover:bg-stone-200 hover:text-black hover:border-black"
+        >
           Read More
         </button>
       </Link>

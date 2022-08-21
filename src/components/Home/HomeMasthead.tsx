@@ -1,4 +1,4 @@
-import ComingSoon from './common/ComingSoon';
+import ComingSoon from '../common/ComingSoon';
 
 const HomeMasthead: React.FC = () => {
   return (

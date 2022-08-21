@@ -26,27 +26,29 @@ const latestPosts = [
 
 const LatestPosts: React.FC = () => {
   return (
-    <div className="border-t border-stone-200 grid text-center mb-6">
-      <Heading>My Latest Posts</Heading>
-      <div className="block md:grid md:grid-cols-3">
-        {latestPosts.map(post => (
-          <Post
-            key={post.id}
-            title={post.title}
-            date={post.date}
-            image={post.image}
-          />
-        ))}
+    <section className="border-t border-stone-200">
+      <div className="lg:container lg:mx-auto grid text-center mb-6">
+        <Heading>My Latest Posts</Heading>
+        <div className="block md:grid md:grid-cols-3">
+          {latestPosts.map(post => (
+            <Post
+              key={post.id}
+              title={post.title}
+              date={post.date}
+              image={post.image}
+            />
+          ))}
+        </div>
+        <Link href="#">
+          <button
+            type="button"
+            className="border border-stone-400 mx-auto px-8 py-2 hover:bg-stone-200 hover:text-black hover:border-black"
+          >
+            Read More
+          </button>
+        </Link>
       </div>
-      <Link href="#">
-        <button
-          type="button"
-          className="border border-stone-400 mx-auto px-8 py-2 hover:bg-stone-200 hover:text-black hover:border-black"
-        >
-          Read More
-        </button>
-      </Link>
-    </div>
+    </section>
   );
 };
 

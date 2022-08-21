@@ -1,15 +1,14 @@
 import type { NextPage } from 'next';
-import About from '../components/common/About';
-import ImageMasthead from '../components/common/ImageMasthead'
-import Logo from '../components/common/Logo';
+
+import HomeMasthead from '../components/HomeMasthead';
+import LatestPosts from '../components/LatestPosts';
 
 const Home: NextPage = () => {
   return (
-    <div className="antialiased min-h-[80vh] flex flex-col items-center justify-center">
-      <ImageMasthead />
-      <Logo />
-      <About />
-    </div>
+    <>
+      <HomeMasthead />
+      <LatestPosts />
+    </>
   );
 };
 

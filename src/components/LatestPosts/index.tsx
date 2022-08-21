@@ -28,7 +28,7 @@ const LatestPosts: React.FC = () => {
     <div className="border-t border-stone-200 grid text-center mb-6">
       <h2 className="text-xl font-bold pt-2 md:pt-4">My Latest Posts</h2>
       <div className="block md:grid md:grid-cols-3">
-        {latestPosts.map((post) => (
+        {latestPosts.map(post => (
           <Post
             key={post.id}
             title={post.title}

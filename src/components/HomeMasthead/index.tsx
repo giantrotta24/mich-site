@@ -3,9 +3,11 @@ import ImageMasthead from './ImageMasthead';
 
 const HomeMasthead: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
-      <ImageMasthead />
-      <Logo />
+    <div className="min-h-screen flex flex-col items-center">
+      <div>
+        <ImageMasthead />
+        <Logo />
+      </div>
     </div>
   );
 };

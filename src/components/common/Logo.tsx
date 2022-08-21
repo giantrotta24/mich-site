@@ -1,13 +1,12 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 import LogoImage from '/public/images/fresh-beginnings-logo.png';
 
 const Logo = () => {
   return (
-    <div className="mt-4">
+    <div className="relative bottom-36 lg:left-96 md:left-0">
       <Image
-        alt="My Life. My Blog."
+        alt="Fresh beginnings logo"
         className="object-contain w-full"
         src={LogoImage}
         height="200"

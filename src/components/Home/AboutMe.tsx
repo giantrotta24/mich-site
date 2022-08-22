@@ -14,7 +14,7 @@ const AboutMe: React.FC = () => {
           <div className="hidden md:block ">
             <Image
               alt="Michelle and her husband"
-              className="object-center object-cover bg-cover bg-no-repeat bg-center max-h-[500px] lg:max-h-[900px]"
+              className="object-center object-cover bg-cover bg-no-repeat bg-center max-h-[500px] lg:max-h-[900px] opacity-80"
               layout="responsive"
               placeholder="blur"
               src={michAboutMeBg}
@@ -24,7 +24,7 @@ const AboutMe: React.FC = () => {
             <div className="md:px-28 md:pt-20">
               <Image
                 alt="a smiling headshot of Michelle Trotta holding a non-alcoholic drink"
-                className="object-contain object-center w-full h-500 md:object-cover shadow-md rounded-sm"
+                className="object-contain object-center w-full h-500 md:object-cover shadow-md rounded-sm opacity-90"
                 placeholder="blur"
                 src={michAboutMe}
               />

@@ -4,8 +4,22 @@ import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
 const Header: React.FC = () => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const target = e.target as HTMLAnchorElement;
+    const anchor = target?.getAttribute('href') as any;
+
+    const location = document.querySelector(anchor).offsetTop;
+
+    window.scrollTo({
+      left: 0,
+      top: location - 78,
+      behavior: 'smooth',
+    });
+  };
+
   return (
-    <Popover className="sticky md:relative z-50 top-0 bg-[#f4cea5]">
+    <Popover className="sticky top-0 z-50 bg-[#f4cea5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 border-stone-200 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -25,11 +39,13 @@ const Header: React.FC = () => {
                 Home
               </a>
             </Link>
-            <Link href="#">
-              <a className="text-base font-medium hover:text-orange-700">
-                About
-              </a>
-            </Link>
+            <a
+              href="#about"
+              className="text-base font-medium hover:text-orange-700"
+              onClick={handleClick}
+            >
+              About
+            </a>
             <Link href="#">
               <a className="text-base font-medium hover:text-orange-700">
                 Blog
@@ -80,11 +96,13 @@ const Header: React.FC = () => {
                     Home
                   </a>
                 </Link>
-                <Link href="#">
-                  <a className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    About
-                  </a>
-                </Link>
+                <a
+                  href="#about"
+                  onClick={handleClick}
+                  className="text-base font-medium text-gray-900 hover:text-gray-700"
+                >
+                  About
+                </a>
                 <Link href="#">
                   <a className="text-base font-medium text-gray-900 hover:text-gray-700">
                     Blog

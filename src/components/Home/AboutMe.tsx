@@ -3,26 +3,30 @@ import Image from 'next/image';
 import Heading from '../common/Heading';
 
 import michAboutMe from '/public/images/about-me/mich-about-me.jpeg';
+import michAboutMeBg from '/public/images/about-me/mich-about-me-couple-bg.jpeg';
 
 const AboutMe: React.FC = () => {
   return (
-    <section className="bg-stone-300 border-t border-[#f6e3ce]">
+    <section id="about" className="bg-stone-300 border-t border-[#f6e3ce]">
       <div className="grid lg:container lg:mx-auto mb-6 px-6 pb-6 text-center">
         <Heading className="mb-5">About me</Heading>
         <div className="grid md:grid-cols-2 gap-6">
-          <div
-            className="hidden md:block object-center object-cover bg-cover bg-no-repeat bg-center max-h-[500px] lg:max-h-[900px]"
-            style={{
-              backgroundImage: `url('/images/about-me/mich-about-me-couple-bg.jpeg')`,
-            }}
-          />
+          <div className="hidden md:block ">
+            <Image
+              alt="Michelle and her husband"
+              className="object-center object-cover bg-cover bg-no-repeat bg-center max-h-[500px] lg:max-h-[900px]"
+              layout="responsive"
+              placeholder="blur"
+              src={michAboutMeBg}
+            />
+          </div>
           <div>
             <div className="md:px-28 md:pt-20">
               <Image
                 alt="a smiling headshot of Michelle Trotta holding a non-alcoholic drink"
-                src={michAboutMe}
+                className="object-contain object-center w-full h-500 md:object-cover shadow-md rounded-sm"
                 placeholder="blur"
-                className="object-contain object-center w-full md:object-cover  shadow-md rounded-sm"
+                src={michAboutMe}
               />
             </div>
             <div className="pt-5 px-4 text-left gap-4 grid">

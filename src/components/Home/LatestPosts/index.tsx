@@ -42,7 +42,7 @@ const LatestPosts: React.FC = () => {
         <Link href="#">
           <button
             type="button"
-            className="border border-stone-400 mx-auto px-8 py-2 hover:bg-stone-200 hover:text-black hover:border-black"
+            className="border border-stone-400 mx-auto px-8 py-2 hover:bg-stone-200 hover:border-black"
           >
             Read More
           </button>

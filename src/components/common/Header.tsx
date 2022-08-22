@@ -6,10 +6,10 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 const Header: React.FC = () => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const target = e.target as HTMLAnchorElement;
-    const anchor = target?.getAttribute('href') as any;
+    const target = e.currentTarget as HTMLElement;
+    const anchor = target?.getAttribute('href') as string;
 
-    const location = document.querySelector(anchor).offsetTop;
+    const location = document!.querySelector<HTMLElement>(anchor)!.offsetTop;
 
     window.scrollTo({
       left: 0,

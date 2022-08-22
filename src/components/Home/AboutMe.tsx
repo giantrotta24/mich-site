@@ -7,7 +7,7 @@ import michAboutMeBg from '/public/images/about-me/mich-about-me-couple-bg.jpeg'
 
 const AboutMe: React.FC = () => {
   return (
-    <section id="about" className="bg-stone-300 border-t border-[#f6e3ce]">
+    <section id="about" className="bg-[#f6e3ceaf] border-t border-stone-300">
       <div className="grid lg:container lg:mx-auto mb-6 px-6 pb-6 text-center">
         <Heading className="mb-5">About me</Heading>
         <div className="grid md:grid-cols-2 gap-6">

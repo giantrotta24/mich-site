@@ -9,7 +9,9 @@ const AboutMe: React.FC = () => {
   return (
     <section id="about" className="bg-[#f6e3ceaf] border-t border-stone-300">
       <div className="grid lg:container lg:mx-auto mb-6 px-6 pb-6 text-center">
-        <Heading className="mb-5">About me</Heading>
+        <Heading className="mb-12 font-['Dancing_Script'] md:text-3xl lg:text-4xl">
+          About Michelle
+        </Heading>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="hidden md:block ">
             <Image
@@ -27,9 +29,11 @@ const AboutMe: React.FC = () => {
                 className="object-contain object-center w-full h-500 md:object-cover shadow-md rounded-sm opacity-90"
                 placeholder="blur"
                 src={michAboutMe}
+                width="634"
+                height="725"
               />
             </div>
-            <div className="pt-5 px-4 text-left gap-4 grid">
+            <div className="pt-5 px-4 gap-4 grid">
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum
                 voluptas, aliquam asperiores quisquam facilis dignissimos aut

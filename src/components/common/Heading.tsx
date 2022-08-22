@@ -8,8 +8,8 @@ const Heading: React.FC<Props> = ({ children, className }) => {
     <h2
       className={
         className
-          ? `${className} text-xl font-bold pt-2 md:pt-4`
-          : 'text-xl font-bold pt-2 md:pt-4'
+          ? `${className} text-xl md:text-2xl lg:text-3xl font-bold pt-2 md:pt-4`
+          : 'text-xl md:text-2xl lg:text-3xl font-bold pt-2 md:pt-4'
       }
     >
       {children}

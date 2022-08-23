@@ -4,14 +4,11 @@ type Props = {
 };
 
 const Heading: React.FC<Props> = ({ children, className }) => {
+  const defaultStyles =
+    "font-['Dancing_Script'] text-3xl lg:text-4xl font-bold pt-2 md:pt-4";
+
   return (
-    <h2
-      className={
-        className
-          ? `${className} text-xl md:text-2xl lg:text-3xl font-bold pt-2 md:pt-4`
-          : 'text-xl md:text-2xl lg:text-3xl font-bold pt-2 md:pt-4'
-      }
-    >
+    <h2 className={className ? `${defaultStyles} ${className}` : defaultStyles}>
       {children}
     </h2>
   );

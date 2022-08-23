@@ -9,9 +9,7 @@ const AboutMe: React.FC = () => {
   return (
     <section id="about" className="bg-[#f6e3ceaf] border-t border-stone-300">
       <div className="grid lg:container lg:mx-auto mb-6 px-6 pb-6 text-center">
-        <Heading className="mb-12 font-['Dancing_Script'] md:text-3xl lg:text-4xl">
-          About Michelle
-        </Heading>
+        <Heading className="mb-10">About Michelle</Heading>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="hidden md:block ">
             <Image

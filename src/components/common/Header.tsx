@@ -56,11 +56,13 @@ const Header: React.FC = () => {
                 Books
               </a>
             </Link>
-            <Link href="#">
-              <a className="text-base font-medium hover:text-orange-700">
-                Contact Me
-              </a>
-            </Link>
+            <a
+              href="#contact"
+              className="text-base font-medium hover:text-orange-700"
+              onClick={handleClick}
+            >
+              Contact Me
+            </a>
           </nav>
         </div>
       </div>
@@ -113,11 +115,13 @@ const Header: React.FC = () => {
                     Books
                   </a>
                 </Link>
-                <Link href="#">
-                  <a className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Contact Me
-                  </a>
-                </Link>
+                <a
+                  href="#contact"
+                  className="text-base font-medium hover:text-orange-700"
+                  onClick={handleClick}
+                >
+                  Contact Me
+                </a>
               </div>
             </div>
           </div>

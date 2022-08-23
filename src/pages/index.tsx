@@ -1,8 +1,9 @@
 import type { NextPage } from 'next';
-import AboutMe from '../components/Home/AboutMe';
 
 import HomeMasthead from '../components/Home/HomeMasthead';
 import LatestPosts from '../components/Home/LatestPosts';
+import AboutMe from '../components/Home/AboutMe';
+import ContactMe from '../components/Home/ContactMe';
 
 const Home: NextPage = () => {
   return (
@@ -10,6 +11,7 @@ const Home: NextPage = () => {
       <HomeMasthead />
       <LatestPosts />
       <AboutMe />
+      <ContactMe />
     </>
   );
 };

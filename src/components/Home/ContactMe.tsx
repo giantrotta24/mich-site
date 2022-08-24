@@ -66,7 +66,7 @@ const ContactMe: React.FC = () => {
               </div>
               <button
                 type="button"
-                className="border border-stone-400 mx-auto py-1 flex hover:bg-stone-200 hover:border-black"
+                className="border border-stone-400 mx-auto px-8 py-1 flex hover:bg-stone-200 hover:border-black"
               >
                 Send!{' '}
                 <PaperAirplaneIcon
@@ -76,7 +76,7 @@ const ContactMe: React.FC = () => {
               </button>
             </form>
           </div>
-          <div className="bg-stone-200 md:px-40 flex-grow">
+          <div className="bg-stone-200 flex-grow px-10">
             <Heading>Lets connect</Heading>
             <div>Want to collaborate? Shoot me an email at</div>
             <div>my email here</div>

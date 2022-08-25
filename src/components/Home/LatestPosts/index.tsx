@@ -26,7 +26,7 @@ const latestPosts = [
 
 const LatestPosts: React.FC = () => {
   return (
-    <section className="border-t border-stone-200">
+    <section className="border-t-2 border-stone-200">
       <div className="lg:container lg:mx-auto grid text-center mb-6">
         <Heading>Latest Posts</Heading>
         <div className="block md:grid md:grid-cols-3">

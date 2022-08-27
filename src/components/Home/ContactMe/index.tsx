@@ -17,7 +17,7 @@ const ContactMe: React.FC = () => {
             </div>
             <ContactMeForm />
           </div>
-          <div className="bg-stone-200 px-4">
+          <div className="bg-[#f6e3ce45] px-4">
             <h3 className="font-['Dancing_Script'] text-3xl lg:text-4xl font-bold pt-2 md:pt-4">
               Let&apos;s Keep in Touch
             </h3>
@@ -27,7 +27,7 @@ const ContactMe: React.FC = () => {
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex gap-2 items-center md:p-4 md:border border-stone-300 hover:text-blue-600"
+                  className="flex gap-2 items-center md:p-4 md:border border-[#f4cea5] hover:text-orange-700"
                 >
                   <AiFillFacebook className="h-10 w-10" aria-hidden="true" />
                   <span className="hidden md:inline">
@@ -38,7 +38,7 @@ const ContactMe: React.FC = () => {
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex gap-2 items-center md:p-4 md:border border-stone-300 hover:text-blue-600"
+                  className="flex gap-2 items-center md:p-4 md:border border-[#f4cea5] hover:text-orange-700"
                 >
                   <AiFillInstagram className="h-10 w-10" aria-hidden="true" />
                   <span className="hidden md:inline">
@@ -49,7 +49,7 @@ const ContactMe: React.FC = () => {
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex gap-2 items-center md:p-4 md:border border-stone-300 hover:text-blue-600"
+                  className="flex gap-2 items-center md:p-4 md:border border-[#f4cea5] hover:text-orange-700"
                 >
                   <AiFillYoutube className="h-10 w-10" aria-hidden="true" />
                   <span className="hidden md:inline">

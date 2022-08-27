@@ -17,30 +17,45 @@ const ContactMe: React.FC = () => {
             </div>
             <ContactMeForm />
           </div>
-          <div className="bg-stone-200 flex-grow px-4">
+          <div className="bg-stone-200 px-4">
             <h3 className="font-['Dancing_Script'] text-3xl lg:text-4xl font-bold pt-2 md:pt-4">
               Let&apos;s Keep in Touch
             </h3>
-            <div className="my-4 px-6">
-              <div className="grid justify-center items-center">
-                <div>
+            <div className="my-4 px-2">
+              <div className="grid justify-center items-center gap-4 md:gap-8">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex gap-2 items-center md:p-4 md:border border-stone-300 hover:text-blue-600"
+                >
                   <AiFillFacebook className="h-10 w-10" aria-hidden="true" />
-                  <span className="sr-only">
+                  <span className="hidden md:inline">
                     Join Fresh Beginnings on Facebook
                   </span>
-                </div>
-                <div>
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex gap-2 items-center md:p-4 md:border border-stone-300 hover:text-blue-600"
+                >
                   <AiFillInstagram className="h-10 w-10" aria-hidden="true" />
-                  <span className="sr-only">
+                  <span className="hidden md:inline">
                     Follow Fresh Beginnings on Instagram
                   </span>
-                </div>
-                <div>
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex gap-2 items-center md:p-4 md:border border-stone-300 hover:text-blue-600"
+                >
                   <AiFillYoutube className="h-10 w-10" aria-hidden="true" />
-                  <span className="sr-only">
+                  <span className="hidden md:inline">
                     Subscribe to Fresh Beginnings on YouTube
                   </span>
-                </div>
+                </a>
               </div>
             </div>
           </div>

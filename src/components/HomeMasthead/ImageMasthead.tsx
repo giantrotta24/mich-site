@@ -1,5 +1,4 @@
 import Image from 'next/image';
-
 import blogPlaceholder from '/public/images/blog-placeholder.jpg';
 import logoImage from '/public/images/fresh-beginnings-logo.png';
 import michelleHome from '/public/images/michelle-home-min.jpg';
@@ -11,7 +10,7 @@ const ImageMasthead: React.FC = () => {
       <div className="lg:flex md:flex-col xl:flex-row md:w-full bg-white hidden md:block rounded-lg">
         <Image
           alt="Michelle's Blog"
-          className="object-cover w-full h-48"
+          className="object-cover w-full h-48 sm-hidden"
           src={blogPlaceholder}
           placeholder="blur"
         />
@@ -41,7 +40,7 @@ const ImageMasthead: React.FC = () => {
       <div className="lg:flex md:flex-col xl:flex-row md:w-full bg-white hidden md:block rounded-lg">
         <Image
           alt="Michelle's Books"
-          className="object-cover w-full h-48"
+          className="object-cover w-full h-48 sm-hidden"
           src={booksPlaceholderLg}
           placeholder="blur"
         />

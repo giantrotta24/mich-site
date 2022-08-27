@@ -5,9 +5,9 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
 const Header: React.FC = () => {
   return (
-    <Popover className="sticky z-50 md:relative top-0 bg-[#f4cea5]">
+    <Popover className="sticky z-50 md:relative top-0 bg-[#f4cea5] sm:drop-shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center border-b-2 border-stone-200 py-6 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center md:border-b-2 md:border-stone-200 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
               <a className="font-['Dancing_Script'] text-xl">Michelle Trotta</a>

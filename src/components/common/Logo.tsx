@@ -7,7 +7,7 @@ const Logo = () => {
     <div className="relative bottom-36 lg:left-96 md:left-0">
       <Image
         alt="Fresh beginnings logo"
-        className="object-contain w-full"
+        className="object-contain w-full static"
         src={LogoImage}
         height="200"
         width="500"

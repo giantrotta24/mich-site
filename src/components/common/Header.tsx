@@ -24,7 +24,9 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center border-b-2 border-stone-200 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
-              <a className="font-['Dancing_Script'] text-xl">Michelle Trotta</a>
+              <a className="font-['Dancing_Script'] hover:text-orange-700 text-xl">
+                Michelle Trotta
+              </a>
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">

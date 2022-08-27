@@ -6,5 +6,5 @@
 @tailwind utilities;
 
 body {
-  @apply text-stone-900 bg-stone-50 font-serif tracking-wide;
+  @apply text-stone-900 bg-stone-50 font-serif tracking-wide scroll-smooth;
 }

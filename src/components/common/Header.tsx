@@ -48,7 +48,7 @@ const Header: React.FC = () => {
             >
               About
             </a>
-            <Link href="#">
+            <Link href="/blog">
               <a className="text-base font-medium hover:text-orange-700">
                 Blog
               </a>
@@ -107,7 +107,7 @@ const Header: React.FC = () => {
                 >
                   About
                 </a>
-                <Link href="#">
+                <Link href="/blog">
                   <a className="text-base font-medium text-gray-900 hover:text-gray-700">
                     Blog
                   </a>
@@ -119,7 +119,7 @@ const Header: React.FC = () => {
                 </Link>
                 <a
                   href="#contact"
-                  className="text-base font-medium hover:text-orange-700"
+                  className="text-base font-medium"
                   onClick={handleClick}
                 >
                   Contact Me

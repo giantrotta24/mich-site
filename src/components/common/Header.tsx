@@ -1,9 +1,42 @@
 import { Fragment } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import { HiMenuAlt2, HiX } from 'react-icons/hi';
 
+type LinkProps = {
+  href: string;
+  className: string;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  children: React.ReactNode;
+  isHome: boolean;
+};
+
+const DynamicLink: React.FC<LinkProps> = props => {
+  const { href, className, onClick, children, isHome } = props;
+
+  const route = isHome ? href : `/${href}`;
+
+  return (
+    <>
+      {isHome ? (
+        <a href={route} className={className} onClick={onClick}>
+          {children}
+        </a>
+      ) : (
+        <Link href={route}>
+          <a className={className}>{children}</a>
+        </Link>
+      )}
+    </>
+  );
+};
+
 const Header: React.FC = () => {
+  const router = useRouter();
+
+  const isHome = router.pathname === '/';
+
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const target = e.currentTarget as HTMLElement;
@@ -36,35 +69,40 @@ const Header: React.FC = () => {
             </Popover.Button>
           </div>
           <nav className="hidden md:flex space-x-12">
-            <Link href="/">
-              <a className="text-base font-medium hover:text-orange-700">
-                Home
-              </a>
-            </Link>
-            <a
+            <DynamicLink
+              href={isHome ? '#home' : ''}
+              className="text-base font-medium hover:text-orange-700"
+              onClick={handleClick}
+              isHome={isHome}
+            >
+              Home
+            </DynamicLink>
+            <DynamicLink
               href="#about"
               className="text-base font-medium hover:text-orange-700"
               onClick={handleClick}
+              isHome={isHome}
             >
               About
-            </a>
+            </DynamicLink>
             <Link href="/blog">
               <a className="text-base font-medium hover:text-orange-700">
                 Blog
               </a>
             </Link>
-            <Link href="#">
+            <Link href="/books">
               <a className="text-base font-medium hover:text-orange-700">
                 Books
               </a>
             </Link>
-            <a
+            <DynamicLink
               href="#contact"
               className="text-base font-medium hover:text-orange-700"
               onClick={handleClick}
+              isHome={isHome}
             >
               Contact Me
-            </a>
+            </DynamicLink>
           </nav>
         </div>
       </div>
@@ -95,35 +133,40 @@ const Header: React.FC = () => {
             </div>
             <div className="py-6 px-5 space-y-6">
               <div className="grid gap-8">
-                <Link href="/">
-                  <a className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Home
-                  </a>
-                </Link>
-                <a
+                <DynamicLink
+                  href={isHome ? '#home' : ''}
+                  className="text-base font-medium text-gray-900 hover:text-gray-700"
+                  onClick={handleClick}
+                  isHome={isHome}
+                >
+                  Home
+                </DynamicLink>
+                <DynamicLink
                   href="#about"
                   onClick={handleClick}
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
+                  isHome={isHome}
                 >
                   About
-                </a>
+                </DynamicLink>
                 <Link href="/blog">
                   <a className="text-base font-medium text-gray-900 hover:text-gray-700">
                     Blog
                   </a>
                 </Link>
-                <Link href="#">
+                <Link href="/books">
                   <a className="text-base font-medium text-gray-900 hover:text-gray-700">
                     Books
                   </a>
                 </Link>
-                <a
+                <DynamicLink
                   href="#contact"
                   className="text-base font-medium"
                   onClick={handleClick}
+                  isHome={isHome}
                 >
                   Contact Me
-                </a>
+                </DynamicLink>
               </div>
             </div>
           </div>

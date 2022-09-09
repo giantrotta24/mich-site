@@ -1,6 +1,7 @@
 import Image from 'next/image';
+
 import blogPlaceholder from '/public/images/blog-placeholder.jpg';
-import LogoImage from '/public/images/fresh-beginnings-logo.png';
+import logoImage from '/public/images/fresh-beginnings-logo.png';
 import michelleHome from '/public/images/michelle-home-min.jpg';
 import booksPlaceholderLg from '/public/images/books-placeholder-lg.jpg';
 
@@ -29,7 +30,7 @@ const ImageMasthead: React.FC = () => {
           <Image
               alt='Fresh beginnings logo'
               className='object-contain w-full'
-              src={LogoImage}
+              src={logoImage}
               height='200'
               width='500'
             />

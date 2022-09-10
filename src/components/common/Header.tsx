@@ -1,22 +1,38 @@
 import { Fragment } from 'react';
 import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { HiMenuAlt2, HiX } from 'react-icons/hi';
 
 const Header: React.FC = () => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const target = e.currentTarget as HTMLElement;
+    const anchor = target?.getAttribute('href') as string;
+
+    const location = document!.querySelector<HTMLElement>(anchor)!.offsetTop;
+
+    window.scrollTo({
+      left: 0,
+      top: location - 78,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <Popover className="sticky z-50 md:relative top-0 bg-[#f4cea5] sm:drop-shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center md:border-b-2 md:border-stone-200 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
-              <a className="font-['Dancing_Script'] text-xl">Michelle Trotta</a>
+              <a className="font-['Dancing_Script'] hover:text-orange-700 text-xl">
+                Michelle Trotta
+              </a>
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Open menu</span>
-              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+              <HiMenuAlt2 className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
           <nav className="hidden md:flex space-x-12">
@@ -25,11 +41,13 @@ const Header: React.FC = () => {
                 Home
               </a>
             </Link>
-            <Link href="#">
-              <a className="text-base font-medium hover:text-orange-700">
-                About
-              </a>
-            </Link>
+            <a
+              href="#about"
+              className="text-base font-medium hover:text-orange-700"
+              onClick={handleClick}
+            >
+              About
+            </a>
             <Link href="#">
               <a className="text-base font-medium hover:text-orange-700">
                 Blog
@@ -40,11 +58,13 @@ const Header: React.FC = () => {
                 Books
               </a>
             </Link>
-            <Link href="#">
-              <a className="text-base font-medium hover:text-orange-700">
-                Contact Me
-              </a>
-            </Link>
+            <a
+              href="#contact"
+              className="text-base font-medium hover:text-orange-700"
+              onClick={handleClick}
+            >
+              Contact Me
+            </a>
           </nav>
         </div>
       </div>
@@ -68,7 +88,7 @@ const Header: React.FC = () => {
                 <div className="-mr-2">
                   <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span className="sr-only">Close menu</span>
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                    <HiX className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
@@ -80,11 +100,13 @@ const Header: React.FC = () => {
                     Home
                   </a>
                 </Link>
-                <Link href="#">
-                  <a className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    About
-                  </a>
-                </Link>
+                <a
+                  href="#about"
+                  onClick={handleClick}
+                  className="text-base font-medium text-gray-900 hover:text-gray-700"
+                >
+                  About
+                </a>
                 <Link href="#">
                   <a className="text-base font-medium text-gray-900 hover:text-gray-700">
                     Blog
@@ -95,11 +117,13 @@ const Header: React.FC = () => {
                     Books
                   </a>
                 </Link>
-                <Link href="#">
-                  <a className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Contact Me
-                  </a>
-                </Link>
+                <a
+                  href="#contact"
+                  className="text-base font-medium hover:text-orange-700"
+                  onClick={handleClick}
+                >
+                  Contact Me
+                </a>
               </div>
             </div>
           </div>

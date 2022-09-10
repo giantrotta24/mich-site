@@ -7,7 +7,7 @@ import booksPlaceholderLg from '/public/images/books-placeholder-lg.jpg';
 
 const ImageMasthead: React.FC = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-3 gap-6 w-full lg:mb-44 sm:mb-2 sm:mt-0 md:mt-8 md:mb-36 mb-40'>
+    <div className='grid grid-cols-1 md:grid-cols-3 gap-6 w-full lg:mb-30 sm:mb-2 sm:mt-0 md:mt-8 md:mb-20 mb-28'>
       <div className='lg:flex md:flex-col xl:flex-row md:w-full bg-white hidden md:block rounded-lg'>
         <Image
           alt='Michelle&apos;s Blog'

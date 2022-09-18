@@ -5,17 +5,8 @@ const ContactMeForm: React.FC = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data: any) => {
-    //Attempt to store input data with type assertion
-    const name = document.querySelector('#name') as HTMLInputElement | null
-    const email = document.querySelector('#email') as HTMLInputElement | null
-    const message = document.querySelector('#message') as HTMLTextAreaElement | null
-
-    //Fixes -> Error: Property 'value' does not exist on type 'HTMLElement'
-    //  These type-guards ensure each input doesn't store
-    //  a null value before accessing the value property.
-    if(name != null){ const nameVal = name.value }
-    if(email != null){ const emailVal = email.value }
-    if(message != null){ const messageVal = message.value }
+    console.log(data);
+    
   };
 
   return (

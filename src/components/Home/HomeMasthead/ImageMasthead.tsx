@@ -25,14 +25,11 @@ const ImageMasthead: React.FC = () => {
             placeholder="blur"
           />
 
-          <div className="flex justify-center items-center z-10 absolute sm:relative md:absolute xl:top-96 2xl:mt-36 lg:top-72 lg:mt-14 lg:pt-0  md:top-full md:bottom-0 sm:bottom-24 sm:m-auto sm:left-0 sm:right-0 drop-shadow-lg -bottom-20">
-            <Image
-              alt="Fresh beginnings logo"
-              className="object-contain w-full"
-              src={logoImage}
-              height="200"
-              width="500"
-            />
+          <div className="flex justify-center items-center z-10 absolute sm:relative md:absolute 2xl:mt-50 xl:top-96 xl:mt-32 lg:top-72 lg:mt-32 lg:pt-0 md:top-full md:bottom-0 sm:bottom-24 m-auto left-0 right-0 drop-shadow-lg -bottom-8">
+            <div className="bg-yellow-600 text-center p-4 text-white">
+              <h1 className="lg:text-3xl md:text-2xl">Fresh Beginnings</h1>
+              <p className="lg:text-xl md:text-lg">Journey to Living a Toxin-Free Life</p>
+            </div>
           </div>
         </div>
       </div>

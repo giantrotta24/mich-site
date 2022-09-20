@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Footer from './Footer';
 
 import Header from './Header';
 
@@ -20,6 +21,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       </Head>
       <Header />
       <main className="antialiased h-auto m-w-screen">{children}</main>
+      <Footer />
     </>
   );
 };

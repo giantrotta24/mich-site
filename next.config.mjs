@@ -13,6 +13,7 @@ function defineNextConfig(config) {
     locales: ['en'],
     defaultLocale: 'en',
   };
+
   return config;
 }
 

@@ -2,10 +2,11 @@ import { useForm } from 'react-hook-form';
 import { HiOutlinePaperAirplane } from 'react-icons/hi';
 
 const ContactMeForm: React.FC = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data: any) => {
     console.log(data);
+    reset();
   };
 
   return (

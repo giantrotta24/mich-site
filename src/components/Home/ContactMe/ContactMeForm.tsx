@@ -25,7 +25,6 @@ const ContactMeForm: React.FC = () => {
               id="name"
               className="p-1 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
               placeholder="Your full name here"
-              value=""
             />
           </div>
           <div>

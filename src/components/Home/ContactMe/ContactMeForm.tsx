@@ -5,7 +5,33 @@ const ContactMeForm: React.FC = () => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data: any) => {
-    console.log(data);
+    data.preventDefault()
+    console.log('Sending')
+    
+    let mailData = {
+      name,
+      email,
+      message
+    }
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      if (res.status === 200) {
+        console.log('Response succeeded!')
+        setSubmitted(true)
+        setName('')
+        setEmail('')
+        setBody('')
+      }
+    })
+
     reset();
   };
 
@@ -33,7 +59,7 @@ const ContactMeForm: React.FC = () => {
               htmlFor="email"
               className="block text-sm font-medium text-gray-700"
             >
-              Email
+              Emai
             </label>
             <input
               type="email"
@@ -61,7 +87,11 @@ const ContactMeForm: React.FC = () => {
             </div>
           </div>
         </div>
-        <button className="border border-stone-400 mx-auto px-8 py-1 flex hover:bg-stone-200 hover:border-black">
+        <button 
+          className="border border-stone-400 mx-auto px-8 py-1 flex hover:bg-stone-200 hover:border-black"
+          type="submit"
+          onClick={(data: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {handleSubmit(data)}}
+        >
           Send!{' '}
           <HiOutlinePaperAirplane className="h-5 w-5 ml-2" aria-hidden="true" />
         </button>

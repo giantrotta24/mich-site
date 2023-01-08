@@ -1,4 +1,7 @@
 import Head from 'next/head';
+import Footer from './Footer';
+
+import { useRouter } from 'next/router';
 
 import Header from './Header';
 
@@ -7,6 +10,10 @@ type Props = {
 };
 
 const Layout: React.FC<Props> = ({ children }) => {
+  const router = useRouter();
+
+  const isHome = router.pathname === '/';
+
   return (
     <>
       <Head>
@@ -19,7 +26,14 @@ const Layout: React.FC<Props> = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="antialiased h-auto m-w-screen">{children}</main>
+      <main
+        className={`${
+          isHome ? '' : 'bg-[#f6e3ceaf]'
+        } antialiased h-auto m-w-screen`}
+      >
+        {children}
+      </main>
+      <Footer />
     </>
   );
 };

@@ -26,14 +26,15 @@ const latestPosts = [
 
 const Blog: NextPage = () => {
   return (
-    <div className="lg:container lg:mx-auto min-h-screen flex flex-col items-center border border-red-500">
-      <h1 className="font-['Dancing_Script'] text-3xl lg:text-4xl font-bold mt-6">
-        Blog
+    <div className="lg:container lg:mx-auto min-h-screen flex flex-col items-center">
+      <h2 className="lg:text-1xl md:text-xl mt-6">Fresh Beginnings</h2>
+      <h1 className="font-['Dancing_Script'] mt-2 mb-4 text-3xl lg:text-4xl font-bold">
+        The Blog
       </h1>
-      <div className="border border-blue-500 w-full">
+      {/* <div className="border border-blue-500 w-full">
         Filter and search bar here
-      </div>
-      <div className="border border-green-500 w-full block md:grid md:grid-cols-3">
+      </div> */}
+      <div className="bg-stone-100 w-full block md:grid md:grid-cols-3">
         {latestPosts.map(post => (
           <Post
             key={post.id}

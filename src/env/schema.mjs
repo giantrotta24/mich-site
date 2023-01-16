@@ -1,5 +1,5 @@
 // @ts-check
-import { z } from "zod";
+import { z } from 'zod';
 
 /**
  * Specify your server-side environment variables schema here.
@@ -9,13 +9,22 @@ export const serverSchema = z.object({
   // FOO: z.string(),
 });
 
+export const serverEnv = {
+  // DATABASE_URL: process.env.DATABASE_URL,
+};
+
 /**
  * Specify your client-side environment variables schema here.
  * This way you can ensure the app isn't built with invalid env vars.
  * To expose them to the client, prefix them with `NEXT_PUBLIC_`.
  */
 export const clientSchema = z.object({
-  // NEXT_PUBLIC_BAR: z.string(),
+  NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER: z.string(),
+  NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG: z.string(),
+  NEXT_PUBLIC_VERCEL_GIT_PROVIDER: z.string(),
+  NEXT_PUBLIC_SANITY_PROJECT_ID: z.string(),
+  NEXT_PUBLIC_SANITY_DATASET: z.string(),
+  NEXT_PUBLIC_SANITY_API_VERSION: z.string(),
 });
 
 /**
@@ -25,5 +34,12 @@ export const clientSchema = z.object({
  * @type {{ [k in keyof z.infer<typeof clientSchema>]: z.infer<typeof clientSchema>[k] | undefined }}
  */
 export const clientEnv = {
-  // NEXT_PUBLIC_BAR: process.env.NEXT_PUBLIC_BAR,
+  NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER:
+    process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER,
+  NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG:
+    process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG,
+  NEXT_PUBLIC_VERCEL_GIT_PROVIDER: process.env.NEXT_PUBLIC_VERCEL_GIT_PROVIDER,
+  NEXT_PUBLIC_SANITY_PROJECT_ID: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  NEXT_PUBLIC_SANITY_API_VERSION: process.env.NEXT_PUBLIC_SANITY_API_VERSION,
 };

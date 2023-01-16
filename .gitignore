@@ -18,10 +18,14 @@
 
 # production
 /build
+/studio/dist
 
 # misc
 .DS_Store
 *.pem
+.vscode
+*.iml
+.idea
 
 # debug
 npm-debug.log*
@@ -33,6 +37,9 @@ yarn-error.log*
 .env
 .env*.local
 .env-example
+
+# Env files created by scripts for working locally
+studio/.env.development
 
 # vercel
 .vercel

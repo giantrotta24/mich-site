@@ -13,6 +13,14 @@ function defineNextConfig(config) {
     locales: ['en'],
     defaultLocale: 'en',
   };
+
+  config.images = {
+    remotePatterns: [
+      { hostname: 'cdn.sanity.io' },
+      { hostname: 'source.unsplash.com' },
+    ],
+  };
+
   return config;
 }
 

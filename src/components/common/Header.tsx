@@ -17,19 +17,17 @@ const DynamicLink: React.FC<LinkProps> = props => {
 
   const route = isHome ? href : `/${href}`;
 
-  return (
-    <>
-      {isHome ? (
-        <a href={route} className={className} onClick={onClick}>
-          {children}
-        </a>
-      ) : (
-        <Link href={route}>
-          <a className={className}>{children}</a>
-        </Link>
-      )}
-    </>
-  );
+  return <>
+    {isHome ? (
+      <a href={route} className={className} onClick={onClick}>
+        {children}
+      </a>
+    ) : (
+      <Link href={route} className={className}>
+        {children}
+      </Link>
+    )}
+  </>;
 };
 
 const Header: React.FC = () => {
@@ -56,10 +54,12 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center md:border-b-2 md:border-stone-200 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <Link href="/">
-              <a className="font-['Dancing_Script'] hover:text-orange-700 text-xl">
+            <Link
+              href="/"
+              className="font-['Dancing_Script'] hover:text-orange-700 text-xl">
+              
                 Michelle Trotta
-              </a>
+              
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -85,15 +85,15 @@ const Header: React.FC = () => {
             >
               About
             </DynamicLink>
-            <Link href="/blog">
-              <a className="text-base font-medium hover:text-orange-700">
+            <Link href="/blog" className="text-base font-medium hover:text-orange-700">
+              
                 Blog
-              </a>
+              
             </Link>
-            <Link href="/books">
-              <a className="text-base font-medium hover:text-orange-700">
+            <Link href="/books" className="text-base font-medium hover:text-orange-700">
+              
                 Books
-              </a>
+              
             </Link>
             <DynamicLink
               href="#contact"
@@ -149,15 +149,19 @@ const Header: React.FC = () => {
                 >
                   About
                 </DynamicLink>
-                <Link href="/blog">
-                  <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                <Link
+                  href="/blog"
+                  className="text-base font-medium text-gray-900 hover:text-gray-700">
+                  
                     Blog
-                  </a>
+                  
                 </Link>
-                <Link href="/books">
-                  <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                <Link
+                  href="/books"
+                  className="text-base font-medium text-gray-900 hover:text-gray-700">
+                  
                     Books
-                  </a>
+                  
                 </Link>
                 <DynamicLink
                   href="#contact"

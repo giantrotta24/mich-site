@@ -39,10 +39,12 @@ const LatestPosts: React.FC = () => {
             />
           ))}
         </div>
-        <Link href="/blog">
-          <a className="border border-stone-400 mx-auto px-8 py-2 hover:bg-stone-200 hover:border-black">
+        <Link
+          href="/blog"
+          className="border border-stone-400 mx-auto px-8 py-2 hover:bg-stone-200 hover:border-black">
+          
             Read More
-          </a>
+          
         </Link>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import blogPlaceholder from '/public/images/blog-placeholder.jpg';
 import logoImage from '/public/images/fresh-beginnings-logo.png';
 import michelleHome from '/public/images/michelle-home-min.jpg';

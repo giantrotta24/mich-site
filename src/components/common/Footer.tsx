@@ -7,8 +7,8 @@ const Footer: React.FC = () => {
     <footer className="text-stone-400 p-4 text-center shadow md:flex md:justify-center md:p-6 ">
       <span className="text-sm text-center">
         © {year}{' '}
-        <Link href="/">
-          <a className="hover:underline">Michelle Trotta, M.S., CCC-SLP</a>
+        <Link href="/" className="hover:underline">
+          Michelle Trotta, M.S., CCC-SLP
         </Link>
         . All Rights Reserved.
       </span>

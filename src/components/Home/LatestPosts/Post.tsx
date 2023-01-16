@@ -1,6 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-// we'll want to use the native image component when we have actual images coming from the server or from the filesystem
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 type PostType = {
   title: string;

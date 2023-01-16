@@ -9,15 +9,16 @@
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwindcss](https://tailwindcss.com/)
 - [Next.js](https://nextjs.org/)
+- [Sanity](https://www.sanity.io/)
 
 ## Developing Locally
 
-Follow these instructions to get started on your local machine. (Must have permissions to repo and Planetscale org to make contributions)
+Follow these instructions to get started on your local machine. (Must have permissions to repo and Sanity org to make contributions)
 
 1. Clone the repository and install dependencies using your terminal inside the app directory.
 
-- `npm install`
+- `yarn install`
 
 2. In the app directory run the dev script.
 
-- `npm run dev` 
+- `yarn run dev`

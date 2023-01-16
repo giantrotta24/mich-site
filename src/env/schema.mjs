@@ -9,8 +9,13 @@ export const serverSchema = z.object({
   // FOO: z.string(),
 });
 
+/**
+ * You can't destruct `process.env` as a regular object in the Next.js
+ * middleware, so you have to do it manually here.
+ * @type {{ [k in keyof z.infer<typeof serverSchema>]: z.infer<typeof serverSchema>[k] | undefined }}
+ */
 export const serverEnv = {
-  // DATABASE_URL: process.env.DATABASE_URL,
+  // FOO: process.env.FOO,
 };
 
 /**

@@ -1,30 +1,23 @@
-import { env } from './src/env/server.mjs';
-
+// @ts-check
 /**
- * Don't be scared of the generics here.
- * All they do is to give us autocompletion when using this.
- *
- * @template {import('next').NextConfig} T
- * @param {T} config - A generic parameter that flows through to the return type
- * @constraint {{import('next').NextConfig}}
+ * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
+ * This is especially useful for Docker builds.
  */
-function defineNextConfig(config) {
-  config.i18n = {
+!process.env.SKIP_ENV_VALIDATION && (await import('./src/env/server.mjs'));
+
+/** @type {import("next").NextConfig} */
+const config = {
+  reactStrictMode: true,
+  swcMinify: true,
+  i18n: {
     locales: ['en'],
     defaultLocale: 'en',
-  };
-
-  config.images = {
+  },
+  images: {
     remotePatterns: [
       { hostname: 'cdn.sanity.io' },
       { hostname: 'source.unsplash.com' },
     ],
-  };
-
-  return config;
-}
-
-export default defineNextConfig({
-  reactStrictMode: true,
-  swcMinify: true,
-});
+  },
+};
+export default config;

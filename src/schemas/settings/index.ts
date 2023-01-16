@@ -2,7 +2,7 @@ import { CogIcon } from '@sanity/icons';
 import * as demo from 'lib/demo.data';
 import { defineArrayMember, defineField, defineType } from 'sanity';
 
-import OpenGraphInput from './OpenGraphInput';
+import OpenGraphInput from './OpenGraphinput';
 
 export default defineType({
   name: 'settings',

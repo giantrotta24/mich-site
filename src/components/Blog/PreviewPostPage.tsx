@@ -16,7 +16,7 @@ export default function PreviewPostPage({
 
   return (
     <PostPage
-      preview
+      preview={false}
       post={postPreview}
       morePosts={morePosts}
       settings={settings}

@@ -56,7 +56,7 @@ export default function ProjectSlugRoute(props: PageProps) {
   return (
     <PostPage
       loading
-      preview
+      preview={preview}
       post={post}
       morePosts={morePosts}
       settings={settings}

@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import Heading from '../common/Heading';
 
@@ -15,10 +15,13 @@ const AboutMe: React.FC = () => {
             <Image
               alt="Michelle and her husband"
               className="object-center object-cover bg-cover bg-no-repeat bg-center max-h-[500px] lg:max-h-[900px] opacity-80"
-              layout="responsive"
               placeholder="blur"
               src={michAboutMeBg}
-            />
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto"
+              }} />
           </div>
           <div>
             <div className="md:px-28 md:pt-20">
@@ -29,7 +32,10 @@ const AboutMe: React.FC = () => {
                 src={michAboutMe}
                 width="634"
                 height="725"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </div>
             <div className="pt-5 px-4 gap-4 grid">
               <p>

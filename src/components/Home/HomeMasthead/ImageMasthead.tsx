@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import blogPlaceholder from '/public/images/blog-placeholder.jpg';
 import logoImage from '/public/images/fresh-beginnings-logo.png';
 import michelleHome from '/public/images/michelle-home-min.jpg';
@@ -13,7 +13,10 @@ const ImageMasthead: React.FC = () => {
           className="object-cover w-full h-48 sm-hidden"
           src={blogPlaceholder}
           placeholder="blur"
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
 
       <div className="relative w-full rounded-lg md:block">
@@ -23,7 +26,10 @@ const ImageMasthead: React.FC = () => {
             className="object-cover w-full z-10"
             src={michelleHome}
             placeholder="blur"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
 
           <div className="flex justify-center items-center z-10 absolute sm:relative md:absolute 2xl:mt-50 xl:top-96 xl:mt-32 lg:top-72 lg:mt-32 lg:pt-0 md:top-full md:bottom-0 sm:bottom-24 m-auto left-0 right-0 drop-shadow-lg -bottom-8">
             <div className="bg-orange-700 text-center p-4 text-white">
@@ -42,7 +48,10 @@ const ImageMasthead: React.FC = () => {
           className="object-cover w-full h-48 sm-hidden"
           src={booksPlaceholderLg}
           placeholder="blur"
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
     </div>
   );

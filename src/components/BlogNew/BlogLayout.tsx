@@ -13,14 +13,15 @@ export default function BlogLayout({
     <>
       <div className="lg:container lg:mx-auto min-h-screen flex flex-col items-center">
         <AlertBanner preview={preview} loading={loading} />
-        <h2 className="lg:text-1xl md:text-xl mt-6">Fresh Beginnings</h2>
-        <h1 className="font-['Dancing_Script'] mt-2 mb-4 text-3xl lg:text-4xl font-bold">
-          The Blog
-        </h1>
+        <header className="text-center">
+          <h1 className="font-['Dancing_Script'] mt-2 mb-4 text-3xl lg:text-4xl font-bold">
+            Fresh Beginnings Blog
+          </h1>
+        </header>
         {/* <div className="border border-blue-500 w-full">
         Filter and search bar here
       </div> */}
-        <section>{children}</section>
+        <section className="container mx-auto px-5">{children}</section>
       </div>
     </>
   );

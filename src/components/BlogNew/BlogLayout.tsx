@@ -13,7 +13,7 @@ export default function BlogLayout({
     <>
       <div className="lg:container lg:mx-auto min-h-screen flex flex-col items-center">
         <AlertBanner preview={preview} loading={loading} />
-        <header className="text-center">
+        <header className="text-center m-4">
           <h1 className="font-['Dancing_Script'] mt-2 mb-4 text-3xl lg:text-4xl font-bold">
             Fresh Beginnings Blog
           </h1>

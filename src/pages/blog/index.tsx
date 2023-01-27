@@ -23,7 +23,6 @@ interface PreviewData {
 
 const Blog: NextPage = (props: PageProps) => {
   const { posts, settings, preview, token } = props;
-  console.log('🚀 ~ file: index.tsx:26 ~ settings', settings);
 
   return <BlogHome posts={posts} settings={settings} />;
 };
@@ -41,7 +40,6 @@ export const getStaticProps: GetStaticProps<
     getSettings(),
     getAllPosts(),
   ]);
-  console.log('🚀 ~ file: index.tsx:44 ~ settings', settings);
 
   return {
     props: {

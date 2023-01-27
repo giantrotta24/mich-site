@@ -1,4 +1,5 @@
 import Layout from 'components/BlogNew/BlogLayout';
+import Hero from 'components/BlogNew/Hero';
 
 import type { Post, Settings } from 'lib/sanity.queries';
 
@@ -11,15 +12,24 @@ export interface BlogHomeProps {
 
 const BlogHome = (props: BlogHomeProps) => {
   const { preview, loading, posts, settings } = props;
-  console.log('🚀 ~ file: index.tsx:14 ~ BlogHome ~ settings', settings);
   const [heroPost, ...morePosts] = posts || [];
 
   return (
-    <>
-      <Layout preview={preview} loading={loading}>
-        Hello World
-      </Layout>
-    </>
+    <Layout preview={preview} loading={loading}>
+      {heroPost && (
+        <Hero
+          title={heroPost.title}
+          coverImage={heroPost.coverImage}
+          date={heroPost.date}
+          author={heroPost.author}
+          slug={heroPost.slug}
+          excerpt={heroPost.excerpt}
+        />
+      )}
+      <div className="border border-red-700 my-6">
+        <h3>Posts</h3>
+      </div>
+    </Layout>
   );
 };
 

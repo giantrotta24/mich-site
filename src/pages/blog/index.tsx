@@ -1,10 +1,16 @@
+import { lazy } from 'react';
 import { GetStaticProps } from 'next';
-
 import type { NextPage } from 'next';
+import { PreviewSuspense } from '@sanity/preview-kit';
+
 import { Post, Settings } from 'lib/sanity.queries';
 import { getAllPosts, getSettings } from 'lib/sanity.client';
 
 import BlogHome from 'components/BlogNew';
+
+const PreviewBlogHome = lazy(
+  () => import('components/BlogNew/PreviewBlogHome')
+);
 
 interface PageProps {
   posts: Post[];
@@ -23,6 +29,18 @@ interface PreviewData {
 
 const Blog: NextPage = (props: PageProps) => {
   const { posts, settings, preview, token } = props;
+
+  if (preview) {
+    return (
+      <PreviewSuspense
+        fallback={
+          <BlogHome loading preview posts={posts} settings={settings} />
+        }
+      >
+        <PreviewBlogHome token={token} />
+      </PreviewSuspense>
+    );
+  }
 
   return <BlogHome posts={posts} settings={settings} />;
 };

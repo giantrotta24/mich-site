@@ -1,17 +1,18 @@
 import Layout from 'components/BlogNew/BlogLayout';
 import Hero from 'components/BlogNew/Hero';
 
-import type { Post, Settings } from 'lib/sanity.queries';
+import type { Post } from 'lib/sanity.queries';
+
+import AllPosts from './AllPosts';
 
 export interface BlogHomeProps {
   preview?: boolean;
   loading?: boolean;
   posts: Post[];
-  settings: Settings;
 }
 
 const BlogHome = (props: BlogHomeProps) => {
-  const { preview, loading, posts, settings } = props;
+  const { preview, loading, posts } = props;
   const [heroPost, ...morePosts] = posts || [];
 
   return (
@@ -26,9 +27,7 @@ const BlogHome = (props: BlogHomeProps) => {
           excerpt={heroPost.excerpt}
         />
       )}
-      <div className="border border-red-700 my-6">
-        <h3>Posts</h3>
-      </div>
+      {morePosts.length > 0 && <AllPosts />}
     </Layout>
   );
 };

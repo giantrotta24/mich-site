@@ -28,21 +28,17 @@ interface PreviewData {
 }
 
 const Blog: NextPage = (props: PageProps) => {
-  const { posts, settings, preview, token } = props;
+  const { posts, preview, token } = props;
 
   if (preview) {
     return (
-      <PreviewSuspense
-        fallback={
-          <BlogHome loading preview posts={posts} settings={settings} />
-        }
-      >
+      <PreviewSuspense fallback={<BlogHome loading preview posts={posts} />}>
         <PreviewBlogHome token={token} />
       </PreviewSuspense>
     );
   }
 
-  return <BlogHome posts={posts} settings={settings} />;
+  return <BlogHome posts={posts} />;
 };
 
 export default Blog;

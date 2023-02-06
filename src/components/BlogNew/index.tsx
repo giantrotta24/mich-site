@@ -27,7 +27,7 @@ const BlogHome = (props: BlogHomeProps) => {
           excerpt={heroPost.excerpt}
         />
       )}
-      {morePosts.length > 0 && <AllPosts />}
+      {morePosts.length > 0 && <AllPosts posts={morePosts} />}
     </Layout>
   );
 };

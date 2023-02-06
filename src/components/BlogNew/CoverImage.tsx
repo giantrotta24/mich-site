@@ -4,14 +4,14 @@ import cn from 'classnames';
 
 import { urlForImage } from 'lib/sanity.image';
 
-interface HeroImageProps {
+interface CoverImageProps {
   title: string;
   slug?: string;
   image: any;
   priority?: boolean;
 }
 
-const ImageComponent = (props: HeroImageProps) => {
+const ImageComponent = (props: CoverImageProps) => {
   const { title, slug, image: source, priority } = props;
 
   if (!source?.asset?._ref) {
@@ -37,7 +37,7 @@ const ImageComponent = (props: HeroImageProps) => {
   );
 };
 
-const HeroImage = (props: HeroImageProps) => {
+const CoverImage = (props: CoverImageProps) => {
   const { title, slug } = props;
 
   return (
@@ -53,4 +53,4 @@ const HeroImage = (props: HeroImageProps) => {
   );
 };
 
-export default HeroImage;
+export default CoverImage;

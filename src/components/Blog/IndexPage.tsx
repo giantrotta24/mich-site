@@ -3,7 +3,6 @@ import BlogHeader from 'components/Blog/BlogHeader';
 import Layout from 'components/Blog/BlogLayout';
 import HeroPost from 'components/Blog/HeroPost';
 import MoreStories from 'components/Blog/MoreStories';
-import IntroTemplate from 'components/Blog/intro-template';
 import * as demo from 'lib/demo.data';
 import type { Post, Settings } from 'lib/sanity.queries';
 
@@ -36,7 +35,6 @@ export default function IndexPage(props: IndexPageProps) {
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
-        <IntroTemplate />
       </Layout>
     </>
   );

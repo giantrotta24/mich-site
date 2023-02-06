@@ -11,6 +11,7 @@ import { height, OpenGraphImage, width } from 'components/Blog/OpenGraphImage';
 const init = cache(async function init(): Promise<SatoriOptions['fonts']> {
   if (!globalThis?.Intl?.Segmenter) {
     console.debug('Polyfilling Intl.Segmenter');
+    //@ts-expect-error
     globalThis.Intl = globalThis.Intl || {};
     //@ts-expect-error
     globalThis.Intl.Segmenter = await createIntlSegmenterPolyfill(
